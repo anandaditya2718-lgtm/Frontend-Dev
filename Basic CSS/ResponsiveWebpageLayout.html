@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Webpage Layout</title>
+  <style>
+    /* ===== Reset ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* ===== Header (Flexbox) ===== */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #1e3d59;
+      color: white;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      animation: fadeUp 1.2s ease-in-out;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff6e40;
+    }
+
+    /* ===== Main Section (Grid) ===== */
+    main {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+      padding: 40px;
+      flex-grow: 1;
+    }
+
+    /* ===== Article ===== */
+    article {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    article h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #1e3d59;
+      animation: fadeUp 1s ease;
+    }
+
+    /* ===== 3 Boxes using Flexbox ===== */
+    .box-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .box {
+      background-color: #ff6e40;
+      color: white;
+      flex: 1 1 30%;
+      min-width: 150px;
+      text-align: center;
+      padding: 20px;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+    }
+
+    /* ===== Sidebar ===== */
+    aside {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    aside h3 {
+      color: #1e3d59;
+      margin-bottom: 15px;
+    }
+
+    aside ul {
+      list-style: square;
+      padding-left: 20px;
+    }
+
+    aside li {
+      margin-bottom: 10px;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background-color: #1e3d59;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    /* ===== Animation ===== */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ===== Responsive Design ===== */
+    @media (max-width: 800px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Webpage</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Articles</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h2>Featured Content</h2>
+      <p>
+        Welcome to my responsive webpage built with Flexbox and Grid.  
+        It demonstrates layout adaptability, animations, and interactive effects.
+      </p>
+      <div class="box-container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+      </div>
+    </article>
+
+    <aside>
+      <h3>Sidebar</h3>
+      <ul>
+        <li>Recent Posts</li>
+        <li>Popular Topics</li>
+        <li>About Me</li>
+        <li>Archives</li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>
+    © 2025 My Responsive Webpage | All Rights Reserved
+  </footer>
+
+</body>
+</html>
