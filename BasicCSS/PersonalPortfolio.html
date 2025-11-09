@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aditya Anand | Portfolio</title>
+
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body Styling */
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      background-color: #f4f7fb;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #222;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em 5%;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2em;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    /* Main Section */
+    main {
+      flex: 1;
+      margin-top: 80px; /* Space for fixed header */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5vh 10%;
+    }
+
+    .intro {
+      max-width: 800px;
+      background-color: #fff;
+      padding: 2em;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 150px; /* px */
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 1.5em;
+      border: 3px solid #ffcc00;
+    }
+
+    /* Paragraph styling with different units */
+    .intro p {
+      font-size: 1.1em; /* em */
+      color: #333;
+      margin-top: 1rem; /* rem */
+    }
+
+    /* Footer */
+    footer {
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+      font-size: 0.9rem;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* Responsive for smaller screens */
+    @media (max-width: 750px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 0.8em;
+        margin-top: 0.5em;
+      }
+
+      main {
+        padding: 5vh 5%;
+      }
+
+      .profile-img {
+        width: 120px;
+        height: 120px;
+      }
+
+      .intro {
+        padding: 1.5em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Aditya Anand</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Section -->
+  <main id="home">
+    <section class="intro">
+      <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-img">
+      <p>
+        Hello! I’m <strong>Aditya Anand</strong>, a passionate web developer who loves crafting beautiful, 
+        responsive, and user-friendly websites. I enjoy learning new technologies and solving real-world problems through code.
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Aditya Anand | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
