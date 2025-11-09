@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newspaper Layout</title>
+
+  <style>
+    /* Reset default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f2f2f2;
+      font-family: 'Georgia', serif;
+      color: #333;
+      line-height: 1.6;
+      padding: 2em;
+      display: flex;
+      justify-content: center;
+    }
+
+    .newspaper {
+      background-color: #fff;
+      padding: 2em;
+      max-width: 1000px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      column-count: 3;
+      column-gap: 2em;
+      text-align: justify;
+    }
+
+    h1 {
+      column-span: all;
+      text-align: center;
+      font-family: 'Times New Roman', serif;
+      font-size: 2.2rem;
+      margin-bottom: 1em;
+      border-bottom: 2px solid #333;
+      padding-bottom: 0.5em;
+    }
+
+    img {
+      float: left;
+      width: 200px;
+      height: auto;
+      margin: 0 1em 1em 0;
+      border-radius: 8px;
+    }
+
+    p {
+      margin-bottom: 1.2em;
+    }
+
+    @media (max-width: 800px) {
+      .newspaper {
+        column-count: 2;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .newspaper {
+        column-count: 1;
+      }
+      img {
+        width: 100%;
+        float: none;
+        display: block;
+        margin: 0 auto 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="newspaper">
+    <h1>The Digital Age of Information</h1>
+
+    <img src="https://via.placeholder.com/200" alt="Newspaper Image">
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, velit eget convallis fermentum, nulla purus iaculis justo, ac bibendum dolor ligula a leo. Praesent tincidunt justo vel purus lacinia, non gravida libero eleifend.</p>
+
+    <p>Vivamus nec bibendum nulla. Nulla facilisi. Sed ac sagittis augue. Etiam vel feugiat sapien. Suspendisse potenti. Donec id viverra lacus. Sed ac nisl ac turpis fermentum convallis.</p>
+
+    <p>Integer id eros sed lectus consequat suscipit. Maecenas at turpis eu velit finibus euismod. Cras rhoncus, nulla non convallis dignissim, lorem lectus tincidunt tortor, non tincidunt nulla leo vel arcu.</p>
+
+    <p>Morbi id ante quis nunc imperdiet faucibus. Nulla vel orci suscipit, pharetra eros sed, sagittis enim. Fusce quis dictum nulla. Integer scelerisque malesuada erat, at sodales libero faucibus non.</p>
+
+    <p>Curabitur dignissim ipsum at lorem eleifend, et facilisis ligula ullamcorper. Duis convallis, arcu sed feugiat fermentum, nunc tortor vestibulum lectus, sit amet laoreet nunc lectus in erat.</p>
+  </section>
+
+</body>
+</html>
