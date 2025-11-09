@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Paris</title>
+  <style>
+    /* General reset and layout */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #34495e;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main section {
+      min-height: 100vh;
+      color: white;
+      padding: 60px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Section 1 - Parallax with background image */
+    #intro {
+      background: url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34') center/cover fixed;
+    }
+
+    /* Section 2 - Linear gradient */
+    #culture {
+      background: linear-gradient(to right, #e74c3c, #f39c12);
+    }
+
+    /* Section 3 - Parallax with another background image */
+    #landmarks {
+      background: url('https://images.unsplash.com/photo-1508057198894-247b23fe5ade') center/cover fixed;
+    }
+
+    /* Section 4 - Radial gradient */
+    #food {
+      background: radial-gradient(circle, #1abc9c, #16a085);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    h1, h2 {
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      line-height: 1.8;
+    }
+
+    /* Spacing and borders */
+    section {
+      border-bottom: 5px solid rgba(255, 255, 255, 0.2);
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Explore Paris</h1>
+    <p>The City of Lights Awaits You</p>
+  </header>
+
+  <nav>
+    <a href="#intro">Home</a>
+    <a href="#culture">Culture</a>
+    <a href="#landmarks">Landmarks</a>
+    <a href="#food">Cuisine</a>
+  </nav>
+
+  <main>
+    <section id="intro">
+      <h2>Welcome to Paris</h2>
+      <p>Paris, the capital of France, is renowned for its art, fashion, gastronomy, and culture. Its picturesque cityscape is crisscrossed by wide boulevards and the River Seine, offering a timeless charm and romantic ambiance.</p>
+    </section>
+
+    <section id="culture">
+      <h2>Rich Culture</h2>
+      <p>From the Louvre Museum’s masterpieces to the rhythm of French chansons, Parisian culture captivates the hearts of visitors. The city thrives on creativity, elegance, and a deep appreciation for the arts.</p>
+    </section>
+
+    <section id="landmarks">
+      <h2>Famous Landmarks</h2>
+      <p>Explore the Eiffel Tower, Notre-Dame Cathedral, and the Arc de Triomphe — iconic symbols of the city’s history and grandeur. Each landmark tells a story of France’s glorious past and enduring beauty.</p>
+    </section>
+
+    <section id="food">
+      <h2>French Cuisine</h2>
+      <p>Paris offers a gastronomic paradise — from cozy cafés to Michelin-starred restaurants. Indulge in croissants, crêpes, escargots, and fine wines as you experience the true flavor of French life.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Explore Paris | Designed by Aditya</p>
+  </footer>
+</body>
+</html>
