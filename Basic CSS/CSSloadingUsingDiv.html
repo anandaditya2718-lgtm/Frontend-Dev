@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Loading Animation</title>
+  <style>
+    /* Page center using Flexbox */
+    :root {
+      --dot-size: 0.9rem;
+      --dot-gap: 0.6rem;
+      --dot-color: #1e88e5;
+      --duration: 0.6s;
+      --rise: -0.9rem;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      display: flex;
+      align-items: center;       /* vertical center */
+      justify-content: center;   /* horizontal center */
+      background: #f6f8fb;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    /* Loader wrapper */
+    .loader {
+      display: flex;
+      gap: var(--dot-gap);
+      align-items: end; /* keeps bottoms aligned while they move */
+      height: 3rem;     /* gives room for movement */
+      aria-hidden: true;
+    }
+
+    /* Dots */
+    .dot {
+      width: var(--dot-size);
+      height: var(--dot-size);
+      border-radius: 50%;
+      background: var(--dot-color);
+      display: inline-block;
+      transform: translateY(0);
+      /* animation */
+      animation-name: bounce;
+      animation-duration: var(--duration);
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite; /* required in spec */
+      animation-fill-mode: both;
+    }
+
+    /* Staggered start delays */
+    .dot:nth-child(1) { animation-delay: 0s; }
+    .dot:nth-child(2) { animation-delay: 0.12s; }
+    .dot:nth-child(3) { animation-delay: 0.24s; }
+
+    /* Keyframes: move up then back down using translateY */
+    @keyframes bounce {
+      0%   { transform: translateY(0); }
+      25%  { transform: translateY(var(--rise)); }
+      50%  { transform: translateY(0); }
+      75%  { transform: translateY(calc(var(--rise) / 2)); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Respect user's reduced-motion preference */
+    @media (prefers-reduced-motion: reduce) {
+      .dot {
+        animation: none;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="loader" role="status" aria-label="Loading">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+
+</body>
+</html>
