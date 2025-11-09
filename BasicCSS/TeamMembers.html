@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Members</title>
+
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f6f8;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2em;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2em;
+      font-size: 2rem;
+      color: #333;
+    }
+
+    /* Team Container using Grid */
+    .team-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2em;
+      width: 90%;
+      max-width: 1000px;
+    }
+
+    /* Card Styling */
+    .team-card {
+      background-color: #fff;
+      padding: 1.5em;
+      border: 2px solid #ddd;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .team-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    .team-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 1em;
+      border: 3px solid #ffcc00;
+    }
+
+    .team-card h2 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5em;
+    }
+
+    .team-card h3 {
+      font-size: 1rem;
+      color: #777;
+      margin-bottom: 1em;
+    }
+
+    .team-card p {
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    /* Highlighted Card (Team Lead) */
+    .highlight {
+      background-color: #ffeeb3;
+      border: 2px solid #ffcc00;
+      box-shadow: 0 6px 14px rgba(255,204,0,0.3);
+    }
+
+    /* Responsive Layout */
+    @media (max-width: 600px) {
+      .team-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Our Team</h1>
+
+  <section class="team-container">
+    <!-- Card 1 -->
+    <div class="team-card">
+      <img src="https://via.placeholder.com/100" alt="Member 1">
+      <h2>Riya Sharma</h2>
+      <h3>UI/UX Designer</h3>
+      <p>Riya crafts intuitive and beautiful user interfaces that enhance user experience through clean design and creative visuals.</p>
+    </div>
+
+    <!-- Card 2 (Highlighted - Team Lead) -->
+    <div class="team-card highlight">
+      <img src="https://via.placeholder.com/100" alt="Team Lead">
+      <h2>Aditya Anand</h2>
+      <h3>Team Lead</h3>
+      <p>Aditya leads the team with passion and precision, ensuring smooth collaboration, quality output, and innovative solutions.</p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="team-card">
+      <img src="https://via.placeholder.com/100" alt="Member 3">
+      <h2>Rahul Mehta</h2>
+      <h3>Frontend Developer</h3>
+      <p>Rahul brings ideas to life using modern web technologies, focusing on responsive, efficient, and accessible web experiences.</p>
+    </div>
+  </section>
+
+</body>
+</html>
